@@ -1,0 +1,7 @@
+{
+  "name": "Jobify",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
