@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="ion-text-center">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    
+    <ion-list-header>
+      <ion-label>Información Personal</ion-label>
+      <ion-chip>
+        <ion-label>1/3</ion-label>
+      </ion-chip>
+    </ion-list-header>
+
+    <ion-item lines="none">
+      <ion-label>Incluye una fotografía tuya.</ion-label>
+    </ion-item>
+
+    <div class="ion-padding ion-text-center">
+      <img *ngIf="image" [src]="image">
+      <ion-button expand="block" class="ion-no-margin" color="primary" (click)="takePicture()"><ion-icon name="camera-outline"></ion-icon></ion-button>
+    </div>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="person-outline"></ion-icon> Nombre(s)</ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="person-outline"></ion-icon> Apellidos</ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="calendar-outline"></ion-icon> Fecha de Nacimiento</ion-label>
+      <ion-datetime picker-format="D MMM YYYY"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="mail-outline"></ion-icon> Email</ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="checkmark-circle-outline"></ion-icon> Contraseña</ion-label>
+      <ion-input required type="password"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      ¿Ya tienes una cuenta?&nbsp;<ion-label color="primary" (click)="goToLogIn()">Inicia Sesión</ion-label>
+    </ion-item>
+
+    <div class="ion-padding" color="light">
+      <ion-button expand="block" color="medium" (click)="goToSignUpT()">Continuar</ion-button>
+    </div>
+    
+  </ion-list>
+
+</ion-content>

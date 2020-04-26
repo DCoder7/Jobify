@@ -1,17 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="dark">
     <ion-title>
-      Tab 2
+      Ofertar Empleo
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+<ion-list-header>Oferta un Empleo</ion-list-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-list>
+  <ion-item lines="none">
+    <ion-label>La mayoría de estos datos se incluirán <br> en el contrato.</ion-label>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="person-outline"></ion-icon> Título de Empleo</ion-label>
+      <ion-input type="text" placeholder="Jardinero, Mesero, etc."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="pencil-outline"></ion-icon> Descripción de Empleo</ion-label>
+      <ion-textarea placeholder="Sé claro y conciso..."></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="calendar-outline"></ion-icon> Fecha de Inicio</ion-label>
+      <ion-datetime display-format="DD.MMM.YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="time-outline"></ion-icon> Hora de Comienzo</ion-label>
+      <ion-datetime display-format="h:mm A"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="hourglass-outline"></ion-icon> Duración</ion-label>
+      <ion-datetime picker-format="HH" displayFormat="HH"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Salario por Hora</ion-label>
+      <ion-input type="number" placeholder="MXN"></ion-input>
+    </ion-item>
+
+    <div class="ion-padding">
+      <ion-button expand="block" class="ion-no-margin">Crear</ion-button>
+    </div>
+
+  </ion-list>
+</ion-list>
+
 </ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Perfil de Empleo</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="ion-padding-top">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../assets/SVG/avatar.svg">
+        </ion-avatar>
+        <h3>Jardinero</h3>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label><ion-icon name="cash-outline"></ion-icon> $100.00 MXN/Hra.</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label><ion-icon name="calendar-outline"></ion-icon> Viernes, 18 de Abril de 2020.</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label><ion-icon name="time-outline"></ion-icon> 3:00 PM</ion-label>
+        <ion-label><ion-icon name="hourglass-outline"></ion-icon> 2 hrs.</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <h4>Descripción</h4>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-text>
+          <p>Requiero un jardinero para barrer el patio de mi casa. Se requieren ligeras habilidades:</p>
+          <ul>
+            <li>Manejo de podadora.</li>
+          </ul>
+          <ul>
+            <li>Tijeras de jardín.</li>
+          </ul>
+          <ul>
+            <li>Cultivo de macetas.</li>
+          </ul>
+        </ion-text>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button expand="block" class="ion-no-margin">Aplicar</ion-button>
+      </div>
+
+  </ion-list>
+</ion-content>

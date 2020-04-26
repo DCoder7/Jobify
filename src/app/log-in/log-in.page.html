@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="dark">
+     <ion-title class="ion-text-center">Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form onsubmit="">
+    <ion-list>
+      <ion-item lines="none" class="ion-margin ion-padding">
+          <ion-img src="../../assets/1x/Jobify-logomdpi.png"></ion-img>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><ion-icon name="mail-outline"></ion-icon> Email</ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><ion-icon name="key-outline"></ion-icon> Contraseña</ion-label>
+        <ion-input required type="password"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        ¿No tienes cuenta?&nbsp;<ion-label color="primary" (click)="goToSignUp()">Regístrate</ion-label>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button expand="block" class="ion-no-margin" (click)="goToMenu()">Acceder</ion-button>
+      </div>
+    </ion-list>
+  </form>
+
+</ion-content>
+
+<!--
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
+</ion-app>
+-->

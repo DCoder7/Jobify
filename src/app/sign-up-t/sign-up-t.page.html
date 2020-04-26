@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="ion-text-center">Registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Información Bancaria</ion-label>
+      <ion-chip>
+        <ion-label>2/3</ion-label>
+      </ion-chip>
+    </ion-list-header>
+
+    <ion-item lines="none">
+      <ion-text>Elige el medio bancario para interactuar en la plataforma.</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="card-outline"></ion-icon> Número de Tarjeta</ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="calendar-outline"></ion-icon> Fecha de Expiración</ion-label>
+      <ion-datetime picker-format="MMM YYYY" displayFormat="MM/YY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="key-outline"></ion-icon> CVV</ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="person-outline"></ion-icon> Titular de la Tarjeta</ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+
+    <div class="ion-padding">
+      <ion-button expand="block" color="medium" (click)="goToSignUpTT()">Continuar</ion-button>
+    </div>
+    
+  </ion-list>
+</ion-content>
