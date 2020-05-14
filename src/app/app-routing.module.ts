@@ -29,6 +29,18 @@ const routes: Routes = [
   {
     path: 'job-profile',
     loadChildren: () => import('./job-profile/job-profile.module').then( m => m.JobProfilePageModule)
+  },
+  {
+    path: 'contract',
+    loadChildren: () => import('./contract/contract.module').then( m => m.ContractPageModule)
+  },
+  {
+    path: 'p-contract-info',
+    loadChildren: () => import('./p-contract-info/p-contract-info.module').then( m => m.PContractInfoPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 @NgModule({

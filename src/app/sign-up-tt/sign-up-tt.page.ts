@@ -44,7 +44,6 @@ export class SignUpTtPage implements OnInit {
         toast.color = 'dark';
         toast.message = 'Tu cuenta ha sido creada.';
         toast.duration = 2000;
-      
         document.body.appendChild(toast);
         return toast.present();
     }

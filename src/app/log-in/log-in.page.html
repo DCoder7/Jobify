@@ -14,12 +14,12 @@
 
       <ion-item>
         <ion-label position="stacked"><ion-icon name="mail-outline"></ion-icon> Email</ion-label>
-        <ion-input required type="text"></ion-input>
+        <ion-input required [(ngModel)]="inputEmail" name="email" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked"><ion-icon name="key-outline"></ion-icon> Contraseña</ion-label>
-        <ion-input required type="password"></ion-input>
+        <ion-input required [(ngModel)]="inputPassword" name="password" type="password"></ion-input>
       </ion-item>
 
       <ion-item lines="none">

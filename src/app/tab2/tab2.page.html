@@ -27,6 +27,11 @@
     </ion-item>
 
     <ion-item>
+      <ion-label position="floating"><ion-icon name="home-outline"></ion-icon> Dirección</ion-label>
+      <ion-input type="text" placeholder="Calle y número, Condado/colonia, CP"></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label position="stacked"><ion-icon name="calendar-outline"></ion-icon> Fecha de Inicio</ion-label>
       <ion-datetime display-format="DD.MMM.YYYY"></ion-datetime>
     </ion-item>
@@ -42,12 +47,12 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Salario por Hora</ion-label>
+      <ion-label position="stacked">Salario por Hora (MXN)</ion-label>
       <ion-input type="number" placeholder="MXN"></ion-input>
     </ion-item>
 
     <div class="ion-padding">
-      <ion-button expand="block" class="ion-no-margin">Crear</ion-button>
+      <ion-button expand="block" class="ion-no-margin" (click)="createJob()" >Crear</ion-button>
     </div>
 
   </ion-list>

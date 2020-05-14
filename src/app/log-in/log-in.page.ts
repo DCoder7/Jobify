@@ -8,17 +8,34 @@ import { Router } from '@angular/router';
 })
 export class LogInPage implements OnInit {
 
-  constructor(private router: Router) { }
+  inputEmail: string;
+  inputPassword: string;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
   }
 
   goToMenu() {
-    this.router.navigate(['tabs']);
+    if(this.inputEmail === 'davideduardo-1996@live.com.mx' && this.inputPassword === 'david') {
+      this.router.navigate(['tabs']);
+      this.presentToast('Bienvenido David');
+    } else {
+      this.presentToast('Email o contraseña no válidos.');
+    }
   }
 
-  goToSignUp(){
+  goToSignUp() {
     this.router.navigate(['sign-up']);
   }
-
+  
+  async presentToast(message: string) {
+    const toast = document.createElement('ion-toast');
+    toast.color = 'dark';
+    toast.message = message;
+    toast.duration = 2000;
+    document.body.appendChild(toast);
+    return toast.present();
+  }
 }

@@ -12,7 +12,9 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class SignUpPage implements OnInit {
 
-  image: String;
+  image: string;
+  nombre: string;
+  apellido: string;
 
   constructor(private camera: Camera, private router: Router) { }
 
@@ -21,7 +23,20 @@ export class SignUpPage implements OnInit {
   }
 
   goToSignUpT() {
-    this.router.navigate(['sign-up-t']);
+    if(this.nombre !== undefined && this.apellido !== undefined) {
+      this.router.navigate(['sign-up-t']);
+    } else {
+      this.presentToast('Todos los campos deben ser llenados.');
+    } 
+  }
+
+  async presentToast(message: string) {
+    const toast = document.createElement('ion-toast');
+    toast.color = 'dark';
+    toast.message = message;
+    toast.duration = 2000;
+    document.body.appendChild(toast);
+    return toast.present();
   }
 
   takePicture() {
@@ -33,13 +48,14 @@ export class SignUpPage implements OnInit {
       sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       correctOrientation: true
     };
-    
     this.camera.getPicture(options).then((imageData) => {
       this.image = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
       console.log(err);
     });
   }
+
+  
 
   ngOnInit() {
   }

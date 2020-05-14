@@ -14,4 +14,8 @@ export class Tab1Page {
   goToJobProfile() {
     this.router.navigate(['job-profile']);
   }
+
+  goToProfile() {
+    this.router.navigate(['profile']);
+  }
 }

@@ -24,14 +24,18 @@
       <ion-button expand="block" class="ion-no-margin" color="primary" (click)="takePicture()"><ion-icon name="camera-outline"></ion-icon></ion-button>
     </div>
 
+    <ion-item lines="none">
+      <ion-label color="danger"><ion-icon name="alert-circle-outline"></ion-icon>&nbsp;Todos los campos son obligatorios.</ion-label>
+    </ion-item>
+
     <ion-item>
       <ion-label position="stacked"><ion-icon name="person-outline"></ion-icon> Nombre(s)</ion-label>
-      <ion-input required type="text"></ion-input>
+      <ion-input required type="text" [(ngModel)]="nombre" name="nombre"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked"><ion-icon name="person-outline"></ion-icon> Apellidos</ion-label>
-      <ion-input required type="text"></ion-input>
+      <ion-input required type="text" [(ngModel)]="apellido" name="apellido"></ion-input>
     </ion-item>
     
     <ion-item>
@@ -41,6 +45,11 @@
     
     <ion-item>
       <ion-label position="stacked"><ion-icon name="mail-outline"></ion-icon> Email</ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"><ion-icon name="call-outline"></ion-icon> Teléfono</ion-label>
       <ion-input required type="text"></ion-input>
     </ion-item>
 

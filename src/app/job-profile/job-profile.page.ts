@@ -20,4 +20,7 @@ export class JobProfilePage implements OnInit {
     return this.bgColors[Math.floor(Math.random() * this.bgColors.length)];
   }
 
+  goToContract(){
+    this.router.navigate(['contract']);
+  }
 }

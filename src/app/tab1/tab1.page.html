@@ -1,6 +1,9 @@
 <ion-header>
 
   <ion-toolbar color="dark">
+    <ion-buttons id-menu="first" slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>
       Buscar Empleo
     </ion-title>
@@ -8,18 +11,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!--Searchbar-->
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="search-outline"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-list side="start">
-      <ion-fab-button><ion-searchbar></ion-searchbar></ion-fab-button>
-    </ion-fab-list>
-  </ion-fab>
-  
   <!--Empleos recientes-->
+
+  <ion-chip (click)="goToProfile()">  
+    <ion-avatar>
+      <img src="../../assets/SVG/avatar.svg" />
+    </ion-avatar>
+    <ion-label>David Pérez</ion-label>
+  </ion-chip>
+
   <ion-list-header>Empleos</ion-list-header>
+
+  <ion-searchbar placeholder="Filtra empleos" inputmode="decimal" type="decimal" id="ionInput"></ion-searchbar>
+  
   <ion-list>
 
     <ion-item (click)="goToJobProfile()">
@@ -31,49 +35,7 @@
         <p><ion-icon name="pin-outline"></ion-icon>2 km.</p>
       </ion-label>
       <ion-label>
-        <h2>$250.00 MXN</h2>
-        <p><ion-icon name="hourglass-outline"></ion-icon>2 hrs.</p>
-      </ion-label>
-    </ion-item>
-
-    <ion-item (click)="goToJobProfile()">
-      <ion-avatar slot="start">
-        <img src="../../assets/SVG/avatar.svg">
-      </ion-avatar>
-      <ion-label>
-        <h2>Jardinero</h2>
-        <p><ion-icon name="pin-outline"></ion-icon>2 km.</p>
-      </ion-label>
-      <ion-label>
-        <h2>$250.00 MXN</h2>
-        <p><ion-icon name="hourglass-outline"></ion-icon>2 hrs.</p>
-      </ion-label>
-    </ion-item>
-
-    <ion-item (click)="goToJobProfile()"> 
-      <ion-avatar slot="start">
-        <img src="../../assets/SVG/avatar.svg">
-      </ion-avatar>
-      <ion-label>
-        <h2>Jardinero</h2>
-        <p><ion-icon name="pin-outline"></ion-icon>2 km.</p>
-      </ion-label>
-      <ion-label>
-        <h2>$250.00 MXN</h2>
-        <p><ion-icon name="hourglass-outline"></ion-icon>2 hrs.</p>
-      </ion-label>
-    </ion-item>
-
-    <ion-item (click)="goToJobProfile()">
-      <ion-avatar slot="start">
-        <img src="../../assets/SVG/avatar.svg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Jardinero</h3>
-        <p><ion-icon name="pin-outline"></ion-icon>2 km.</p>
-      </ion-label>
-      <ion-label>
-        <h3>$250.00 MXN</h3>
+        <h2>$200.00 MXN</h2>
         <p><ion-icon name="hourglass-outline"></ion-icon>2 hrs.</p>
       </ion-label>
     </ion-item>

@@ -9,14 +9,32 @@ import { Router } from '@angular/router';
 })
 export class SignUpTPage implements OnInit {
 
+  fechaNacimiento: string;
+  numeroTarjeta: string;
+  cvv: string;
+  titular: string;
+
   constructor(private router: Router) { }
 
   goToSignUpTT() {
-    this.router.navigate(['sign-up-tt']);
+    if(this.fechaNacimiento !== undefined && this.numeroTarjeta !== undefined && this.cvv !== undefined && this.titular !== undefined) {
+      this.router.navigate(['sign-up-tt']);
+    } else {
+      this.presentToast('Todos los campos deben ser llenados.');
+    }
   }
 
   goToLogIn() {
     this.router.navigate(['log-in']);
+  }
+
+  async presentToast(message: string) {
+    const toast = document.createElement('ion-toast');
+    toast.color = 'dark';
+    toast.message = message;
+    toast.duration = 2000;
+    document.body.appendChild(toast);
+    return toast.present();
   }
 
   ngOnInit() {

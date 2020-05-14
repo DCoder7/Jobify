@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Contrato</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>
+    Contrato
+  </ion-list-header>
+
+  <ion-list>
+    <ion-item>
+      <p>Este acuerdo de servicio permite proteger a ambas partes: prestamista de servicio David Eduardo Pérez Cruz y beneficiado del servicio Jaime Hernández. </p>
+    </ion-item>
+
+    <ion-item lines="none">
+      <p>El servicio de Jardinero en la dirección 11 Sur 4945, Reforma Agua Azul, 72430, incluye los servicios y especificaciones estblecidas originalente en la descripción de empleo:</p>
+    </ion-item>
+
+    <ion-item>
+        <ion-text>
+          <p>Jardinero para barrer el patio de mi casa. Se requieren las siguientes habilidades:</p>
+          <ul>
+            <li>Manejo de podadora.</li>
+          </ul>
+          <ul>
+            <li>Tijeras de jardín.</li>
+          </ul>
+          <ul>
+            <li>Cultivo de macetas.</li>
+          </ul>
+        </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <p>Se acuerda que la paga del servicio es $100.00 MXN (cien pesos mexicanos) durante un periodo de 2 horas.</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-text color="primary">
+        Al presionar el botón "Crear" se acuerda todo lo establecido por ambas partes (beneficiario del servicio y el que proporciona) en este contrato.
+      </ion-text>
+    </ion-item>
+
+    <div class="ion-padding">
+      <ion-button expand="block" class="ion-no-margin" (click)="createContract()">Crear</ion-button>
+    </div>
+  </ion-list>
+</ion-content>
